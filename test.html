@@ -1,65 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> HTML y JavaScript Diagnostico</title>
-    <style>
-        /* Pregunta: ¿Qué propiedad CSS se usa para cambiar el color de fondo de un elemento? */
-        body {
-            background-color: #f4f4f4;  /* Respuesta correcta
-            font-family: Arial, sans-serif;
-        }
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>HTML y JavaScript Diagnostico</title>
+                <link rel="stylesheet" href="styles.css"> <!-- Vinculando el archivo CSS -->
+                </head>
+                <body>
 
-        /*Pregunta: ¿Cómo se centra un div dentro de su contenedor padre horizontalmente? */
-        #container {
-            width: 50%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+                    <div id="container">
+                            <h1>Welcome to the Quiz</h1>
+                                    <p id="question">What is the capital of France?</p>
+                                            <button class="button" onclick="checkAnswer()">Submit Answer</button>
+                                                </div>
 
-        /* Pregunta: ¿Cuál es la diferencia entre 'id' y 'class' en CSS? */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            color: #fff;
-            background-color: #007bff;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-    <div id="container">
-        <h1>Welcome to the Quiz</h1>
-        <p id="question">What is the capital of France?</p>
-        <button class="button" onclick="checkAnswer()">Submit Answer</button>
-    </div>
-
-    <script>
-        /* Pregunta: ¿Cuál es la función de 'document.getElementById' en JavaScript? */
-        function checkAnswer() {
-            /* Pregunta: ¿Qué hace 'prompt' y cómo se puede usar en lugar de 'alert'? */
-            let answer = prompt("Enter your answer:");
-
-            /* Pregunta: ¿Cuál es el propósito de la instrucción 'if' en este fragmento de código? */
-            if (answer.toLowerCase() === 'paris') {
-                alert("Correct!");
-            } else {
-                alert("Try again!");
-            }
-        }
-
-        /* Pregunta: ¿Cómo se puede manipular el DOM usando JavaScript para cambiar el contenido de un elemento? */
-        document.getElementById("question").innerText = "What is the capital of Spain?";
-    </script>
-
-</body>
-</html>
+                                                    <script src="script.js"></script>
+                                                    </body>
+                                                    </html>

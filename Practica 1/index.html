@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Descripción del sitio">
+        <title>Mi sitio web</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img src="https://www.ionos.mx/digitalguide/fileadmin/_processed_/0/d/csm_html-tagst_ff51156b5d.webp" alt="Img" height="160" width="950"> 
+        <!-- Barra de navegación -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección principal -->
+        <section id="inicio">
+            <h1>Bienvenidos a mi Página Personal</h1>
+            <p>Esta página esta hecha con HTML Y CSS Aqui puedes ver información sobre mí y 
+                un espacio de contacto para quien desee comunicarse conmigo.</p>
+        </section>
+
+        <!-- Sección "Sobre mí" -->
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <ul>
+                <li>Me encanta programar y crear nuevas aplicaciones.</li>
+                <li>Soy un apasionado de la tecnología y la innovación.</li>
+                <li>Disfruto aprender nuevos lenguajes de programación.</li>
+                <li>Me Gusta jugar videojuegos y con mi pug</li>
+            </ul>
+        </section>
+
+        <!-- Sección de contacto con formulario -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="/enviar-formulario" method="POST">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="correo">Correo:</label><br>
+                <input type="email" id="correo" name="correo" required><br><br>
+
+                <label for="comentarios">Comentarios:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="5" required></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+<footer>
+    <center> <h4>Todos los Derechos Resevados ®</h4></center>
+</footer>
+    </body>
+</html>

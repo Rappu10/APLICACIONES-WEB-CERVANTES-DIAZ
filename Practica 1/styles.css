@@ -115,4 +115,25 @@ button:hover {
     form {
         padding: 1rem;
     }
+    
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.productos {
+    flex: 1 1 160px;
+    background-color: aqua;
+text-align: center;
+border: 1px solid black;
+padding: 15px;
+box-shadow: 2px 2px 4px;
+
+}
+.productos img {
+    max-width: 100%;
+    height: auto;
+}
 }

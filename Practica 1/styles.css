@@ -124,7 +124,7 @@ button:hover {
 }
 
 .productos {
-    flex: 1 1 160px;
+    flex: 1 1 200px;
     background-color: aqua;
 text-align: center;
 border: 1px solid black;
@@ -135,5 +135,48 @@ box-shadow: 2px 2px 4px;
 .productos img {
     max-width: 100%;
     height: auto;
+}
+slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    font-size: 18px;
+    transition: 0.6s ease;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+img {
+    width: 100%;
 }
 }

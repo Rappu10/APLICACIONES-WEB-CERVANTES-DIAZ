@@ -1,81 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Descripción del sitio">
-        <title>Mi sitio web</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <img src="assets/encabezado.jpeg" height="160" width="940"> 
-        <!-- Barra de navegación -->
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#quienes somos">Quienes Somos</a></li>
-                <li><a href="#galeria-productos">Productos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div = class="slider">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción del sitio">
+    <title>Mi Sitio Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para el slider */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/WhatsApp Image 2024-09-12 at 8.36.45 AM.jpeg" alt="Encabezado" height="30" width="1000"> 
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#quienes-somos">Quienes Somos</a></li>
+            <li><a href="#galeria-productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="slider">
             <div class="slide active">
-                <img src="assets/encabezado.jpeg" alt="encabezado">
+                <img src="assets/WhatsApp Image 2024-09-12 at 8.36.45 AM.jpeg" alt="Encabezado">
             </div>
             <div class="slide">
-                <img src="assets/download1.webp" alt="encabezado1">
+                <img src="assets/banner1.jpg" alt="Imagen secundaria">
             </div>
+            <div class="slide">
+                <img src="assets/banner3.jpg" alt="Imagen terciaria">
+            </div>
+            <div class="slide">
+                <img src="assets/banner4.jpg" alt="Imagen adicional 1">
+            </div>
+            <div class="slide">
+                <img src="assets/banner5.jpg" alt="Imagen adicional 2">
+            </div>
+            <div class="slide">
+                <img src="assets/WhatsApp Image 2024-09-12 at 8.36.45 AM.jpeg" alt="Imagen adicional 3">
+            </div>
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
         </div>
-        <button class="prev"
-        onclick="plusSlides(-1)">&#10094;</button>
-        <button class="next"
-        onclick="plusSlides(1)">&#10095;</button>  
-        </nav>
+    </nav>
 
-        <!-- Sección principal -->
+    <main>
         <section id="inicio">
             <h1>Bienvenidos a mi Página Personal</h1>
-            <p>Esta página esta hecha con HTML Y CSS Aqui puedes ver información sobre mí y 
-                un espacio de contacto para quien desee comunicarse conmigo.</p>
+            <p>Esta página está hecha con HTML y CSS. Aquí puedes ver información sobre mí y un espacio de contacto para quien desee comunicarse conmigo.</p>
         </section>
 
-        <section id="quienes somos">
+        <section id="quienes-somos">
             <h2>Quienes Somos</h2>
             <ul>
                 <li>Me encanta programar y crear nuevas aplicaciones.</li>
                 <li>Soy un apasionado de la tecnología y la innovación.</li>
                 <li>Disfruto aprender nuevos lenguajes de programación.</li>
-                <li>Me Gusta jugar videojuegos y con mi pug</li>
+                <li>Me gusta jugar videojuegos y pasar tiempo con mi pug.</li>
             </ul>
         </section>
-      <!-- Sección de productos -->
+
         <section id="galeria-productos">
+            <h2>Galería de Productos</h2>
             <div class="galeria">
                 <div class="productos">
-                    <img src="assets/shopping (3).webp" alt="Producto 1">
-                    <h3>Galaxy s24 Ultra</h3>
-                    <p>Descripción</p>
+                    <img src="assets/shopping (3).webp" alt="Galaxy S24 Ultra">
+                    <h3>Galaxy S24 Ultra</h3>
+                    <p>Descripción del producto.</p>
                     <button>Comprar</button>
                 </div>
                 <div class="productos">
-                    <img src="assets/shopping (1).webp" alt="Producto 2">
-                    <h3>Honor Magic 6 lite</h3>
-                    <p>Descripción</p>
+                    <img src="assets/shopping (1).webp" alt="Honor Magic 6 Lite">
+                    <h3>Honor Magic 6 Lite</h3>
+                    <p>Descripción del producto.</p>
                     <button>Comprar</button>
                 </div>
                 <div class="productos">
-                    <img src="assets/shopping (2).webp" alt="Producto 3">
+                    <img src="assets/shopping (2).webp" alt="Red Magic 9 Pro">
                     <h3>Red Magic 9 Pro</h3>
-                    <p>Descripción</p>
+                    <p>Descripción del producto.</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="productos">
+                    <img src="assets/download1.webp" alt="Iphone">
+                    <h3>IPhone 15 Pro MAX </h3>
+                    <p>Descripción del producto.</p>
                     <button>Comprar</button>
                 </div>
             </div>
-
         </section>
 
-        <!-- Sección de contacto con formulario -->
         <section id="contacto">
             <h2>Contacto</h2>
             <form action="/enviar-formulario" method="POST">
@@ -91,8 +152,37 @@
                 <button type="submit">Enviar</button>
             </form>
         </section>
-<footer>
-    <center> <h4>Todos los Derechos Resevados ®</h4></center>
-</footer>
-    </body>
+    </main>
+
+    <footer>
+        <center><h4>Todos los Derechos Reservados ®</h4></center>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        let autoSlideInterval;
+
+        function plusSlides(n) {
+            clearInterval(autoSlideInterval); // Pausa el movimiento automático cuando se hace clic en las flechas
+            showSlides(slideIndex += n);
+            autoSlideInterval = setInterval(() => plusSlides(1), 3000); // Reinicia el movimiento automático
+        }
+
+        function showSlides(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            slides.forEach((slide, index) => {
+                slide.style.display = (index === slideIndex) ? 'block' : 'none';
+            });
+        }
+
+        // Mostrar la primera diapositiva y empezar el movimiento automático al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlides(slideIndex);
+            autoSlideInterval = setInterval(() => plusSlides(1), 3000); // Cambia la imagen cada 3 segundos
+        });
+    </script>
+</body>
 </html>
+

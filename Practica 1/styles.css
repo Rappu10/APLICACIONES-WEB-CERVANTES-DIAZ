@@ -3,8 +3,14 @@ body {
     font-family: "Playwrite CU", cursive;
     margin: 0;
     padding: 0;
-    background-color: coral;
+    background-color: rgb(250, 180, 150);
     color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Estilos para la barra de navegación */
@@ -19,6 +25,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -29,10 +36,14 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: inline-block;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    background-color: #555;
+    border-radius: 4px;
 }
 
 /* Estilos para la sección principal */
@@ -51,12 +62,13 @@ p {
     line-height: 1.5;
 }
 
-/* Estilos para la sección "Sobre mí" */
+/* Estilos para los encabezados de sección */
 h2 {
     font-size: 2rem;
     color: black;
 }
 
+/* Estilos para listas */
 ul {
     list-style-type: square;
     padding-left: 2rem;
@@ -83,7 +95,9 @@ label {
     margin-bottom: 0.5rem;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"], 
+input[type="email"], 
+textarea {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;
@@ -99,10 +113,102 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #555;
+}
+
+/* Estilos para la galería de productos */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.productos {
+    flex: 1 1 250px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.productos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.productos img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para el encabezado */
+.encabezado {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.encabezado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Estilos para el slider */
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.slider img.active {
+    display: block; /* Solo la imagen activa será visible */
+}
+
+/* Flechas del slider */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
 }
 
 /* Responsive design */
@@ -115,68 +221,12 @@ button:hover {
     form {
         padding: 1rem;
     }
-    
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 40px;
-}
 
-.productos {
-    flex: 1 1 200px;
-    background-color: aqua;
-text-align: center;
-border: 1px solid black;
-padding: 15px;
-box-shadow: 2px 2px 4px;
+    .galeria {
+        gap: 10px;
+    }
 
-}
-.productos img {
-    max-width: 100%;
-    height: auto;
-}
-slider {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slide {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: auto;
-}
-
-.active {
-    display: block;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    background-color: rgba(0,0,0,0.5);
-    border: none;
-    font-size: 18px;
-    transition: 0.6s ease;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-img {
-    width: 100%;
-}
+    .productos {
+        flex: 1 1 100%;
+    }
 }

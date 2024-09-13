@@ -3,7 +3,7 @@ body {
     font-family: "Playwrite CU", cursive;
     margin: 0;
     padding: 0;
-    background-color: rgb(250, 180, 150);
+    background-color: rgb(150, 180, 250);
     color: #333;
 }
 
@@ -230,3 +230,4 @@ button:hover {
         flex: 1 1 100%;
     }
 }
+

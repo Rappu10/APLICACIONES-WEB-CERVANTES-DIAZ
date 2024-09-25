@@ -1,0 +1,90 @@
+<title>Productos</title>
+<link rel="stylesheet" href="styles.css">
+<header>
+    <img src="assets/WhatsApp Image 2024-09-12 at 8.36.45 AM.jpeg" alt="Encabezado" height="30" width="1000"> 
+</header>
+<script>
+    //Obtener el valor del parámetro URL
+    const ParametroURL = new 
+    URLSearchParams(window.location.search);
+    const id_producto = urlParams.get('id_producto');
+    //Datos del producto
+    const producto = {
+      Producto1: {
+        nombre: "Honor Magic 6", 
+        imagen: "/assets/shopping (1).webp",
+        descripcion: "Descripción del producto 1"
+
+      },
+      Producto2: {
+        nombre: "S24 Ultra", 
+        imagen: "/assets/shopping (3).webp",
+        descripcion: "Descripción del producto"
+
+      },
+      Producto3: {
+        nombre: "Red Magic 9 Pro", 
+        imagen: "/assets/shopping (2).webp",
+        descripcion: "Descripción del producto"
+
+      },
+      Producto4: {
+        nombre: "IPhone 15 Pro Max", 
+        imagen: "/assets/download1.webp",
+        descripcion: "Descripción del producto"
+    }
+};
+</script>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Regresar a Inicio</a></li>
+    </ul>
+</nav>
+
+<section id="1">
+    <center><img src="assets/shopping (1).webp" alt="1">
+    <h3>Honor Magic 6 Lite</h3>
+    <p>Descripción del producto.<p>| Procesador Snapdragon 888 |<p> | 8Gb en Ram |</p><p>| 256Gb en Rom |</p></p></p><p><button>Comprar</button></p> </center>
+    </section>
+</div>
+
+<section id="2"></section>
+    <center><img src="assets/shopping (3).webp" alt="2">
+    <h3>Samsumg Galaxy S24 Ultra</h3>
+    <p>Descripción del producto.<p>| Procesador Snapdragon 8 Gen 1 |<p> | 12Gb en Ram |</p><p>| 512Gb en Rom |</p></p><button>Comprar</button></p> </center>
+</section>
+</div>
+
+<section id="3">
+    <center><img src="assets/shopping (2).webp" alt="3">
+    <h3>Red Magic 9Pro</h3>
+    <p>Descripción del producto.<p>| Procesador Snapdragon 7 Gen 2 |<p> | 12Gb en Ram |</p><p>| 256Gb en Rom |</p></p></p></p><button>Comprar</button></p></center>
+</section>
+</div>
+
+<section id="4">
+    <center><img src="assets/download1.webp" alt="4">
+    <h3>IPhone 15 Pro Max</h3>
+    <p>Descripción del producto.<p>| Procesador Bionic A18  |<p> | 8Gb en Ram |</p><p>| 256Gb en Rom |</p></p></p></p><button>Comprar</button></p></center>
+</section>
+</div>
+ <section id="contacto_vp">
+        <h2>Contacto</h2>
+        <form action="/enviar-formulario" method="POST">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="correo">Correo:</label><br>
+            <input type="email" id="correo" name="correo" required><br><br>
+
+            <label for="comentarios">Cantidad:</label><br>
+
+           <p><input type="number" id="Cantidad"
+            name="cantidad" min="1" value="1" </p> 
+
+           <p><button type="submit">Enviar</button></p> 
+        </form>
+    </section>
+</div>
+</div>
